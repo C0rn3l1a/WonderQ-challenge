@@ -12,7 +12,7 @@ All of these actions are triggered by the 3 endpoints of WonderQ:
 
 - *[post] /addMessage* : takes the body of the request and stores it as a new message. It is prepared to receive strings and JSON objects, binary data support could be added if needed.
 
-- *[get] /readMessage* : returns the next message on the queue and performs the expirations check.
+- *[get] /readMessage* : returns the next message on the queue and performs the expirations check. it recieves a query param "time" that indicates how long should that message be marked as processed.
 
 - *[patch] /processMessage/:ID* : uses the ID parameter to remove the message corresponding to that ID form the processing queue.
 
